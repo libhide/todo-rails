@@ -9,5 +9,11 @@ Rails.application.routes.draw do
     end
   end
 
-  root 'todo_lists#index'
+  authenticated :user do
+    root to: 'todo_lists#index', as: :authenticated_root
+  end
+
+  unauthenticated do
+    root 'static_pages#index'
+  end
 end

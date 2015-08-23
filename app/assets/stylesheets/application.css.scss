@@ -217,7 +217,8 @@ input[type="password"] {
 textarea {
   height: 200px;
 }
-input[type="submit"] {
+input[type="submit"],
+button {
   background: white;
   outline: none;
   border: none;
@@ -266,12 +267,24 @@ a {
   }
 }
 
+// Landing Page Styles
 
+.btn-land {
+  width: 40%;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 5px;
 
+  a {
+    text-decoration: none;
+    color: $dark;
 
-
-
-
+    &:hover {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
 
 
 
