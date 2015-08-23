@@ -11,6 +11,7 @@
  * file per style scope.
  *
  *= require normalize-rails
+ *= require sweet-alert
  *= require_tree .
  *= require_self
  */
@@ -220,7 +221,7 @@ textarea {
   padding: 1em;
 }
 input[type="submit"],
-button {
+button.mine {
   background: white;
   outline: none;
   border: none;
@@ -272,9 +273,7 @@ a {
 // Landing Page Styles
 
 .btn-land {
-  width: 40%;
   margin: 0 auto;
-  display: block;
   margin-bottom: 5px;
 
   a {

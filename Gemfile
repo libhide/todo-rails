@@ -13,6 +13,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'normalize-rails'
 gem 'devise', '~> 3.5.2'
+gem 'sweetalert-rails'
 
 group :development, :test do
   gem 'byebug'
