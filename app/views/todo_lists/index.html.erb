@@ -5,6 +5,12 @@
   </div>
 <% end %>
 
-<div class="links">
-  <%= link_to "New Todo List", new_todo_list_path %>
+<% if @todo_lists.blank? %>
+  <p style="text-align: center;">You don't have any lists right now. Click the plus to add one!</p>
+<% end %>
+
+<div class="links" style="margin: 0;">
+  <%= link_to new_todo_list_path do %>
+    <i class="fa fa-plus"></i>  New Todo
+  <% end %>
 </div>

@@ -186,6 +186,7 @@ body {
   color: white;
   text-decoration: none;
   a {
+    text-decoration: none;
     color: white;
     font-weight: 400;
   }
@@ -216,6 +217,7 @@ input[type="password"] {
 }
 textarea {
   height: 200px;
+  padding: 1em;
 }
 input[type="submit"],
 button {
@@ -284,6 +286,16 @@ a {
       color: white;
     }
   }
+}
+
+// Global stuff
+
+.user-actions {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px 20px 0 0;
+  font-size: 1em;
 }
 
 
