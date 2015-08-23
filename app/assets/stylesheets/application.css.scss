@@ -10,34 +10,29 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require normalize-rails
  *= require_tree .
  *= require_self
  */
 
-$white_opaque: rgba(250, 250, 250, .3);
+$white_opaque: rgba(250, 250, 250, .25);
 $dark: #1F7972;
 
 * {
   box-sizing: border-box;
 }
 
-html {
-  height: 100%;
-}
-
 body {
-  height: 100%;
-  background: -webkit-linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
-  background:    -moz-linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
-  background:     -ms-linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
-  background:      -o-linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
-  background:         linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
+  height: 100vh;
+  background: image-url("bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: 'Lato', sans-serif;
 }
 
 .clearfix:before,
 .clearfix:after {
-    content: " ";
+    content: "";
     display: table;
 }
 
@@ -47,20 +42,19 @@ body {
 
 #notice {
   text-align: center;
-  font-size: 0.6em;
+  font-size: 1em;
   color: $dark;
-  font-weight: 100;
+  font-weight: 300;
 }
 
 .container {
-  // width: 50%;
-  max-width: 750px;
+  max-width: 600px;
+  margin: 4em auto;
   background: $white_opaque;
-  margin: 3em auto 0 auto;
   border-radius: 7px;
   -webkit-box-shadow: 0 0 4px 3px rgba(0,0,0,.3);
   box-shadow: 0 0 4px 4px rgba(0,0,0,.03);
-  padding: 1em 0;
+  padding: 0.9em;
 }
 
 .todo_list_title {
@@ -70,6 +64,8 @@ body {
   text-transform: uppercase;
   color: white;
   margin: 0;
+  line-height: 1.1;
+  margin-bottom: 20px;
   a {
     text-decoration: none;
     color: white;
@@ -83,9 +79,9 @@ body {
 .todo_list_sub_title {
   margin: 0 0 3em 0;
   text-align: center;
-  font-size: 0.9em;
+  font-size: 1em;
   color: $dark;
-  font-weight: 100;
+  font-weight: 300;
 }
 
 .index_row {
@@ -101,6 +97,10 @@ body {
     width: 100%;
     border-top: 1px solid rgba(250,250,250, .3);
     border-bottom: 1px solid rgba(250,250,250, .3);
+    transition: all .25s ease-in-out;
+    &:hover {
+      background-color: rgba(250, 250, 250, .15);
+    }
     .complete {
       width: 10%;
       float: left;
@@ -115,7 +115,7 @@ body {
         margin: 0;
         padding: 1em;
         color: $dark;
-        font-weight: 100;
+        font-weight: 300;
       }
     }
     .trash {
@@ -127,7 +127,7 @@ body {
     }
     i {
       color: white;
-      transition: all .4s ease-in-out;
+      transition: all .25s ease-in-out;
       &:hover {
         color: $dark;
       }
@@ -137,17 +137,21 @@ body {
     margin-top: 2em;
     padding: 0 5%;
     input[type="text"] {
+      font-size: 1em;
+      font-weight: 300;
       width: 72%;
       margin-right: 2%;
       display: inline-block;
       outline: none;
       background: rgba(250,250,250,.4);
+      color: transparentize($dark, 0.1);
       border: none;
       height: 40px;
       border-radius: 4px;
-      padding: 1em 2em;
     }
     input[type="submit"] {
+      font-size: 1em;
+      font-weight: 300;
       background: rgba(250,250,250,.4);
       outline: none;
       border: none;
@@ -162,6 +166,14 @@ body {
       }
     }
     ::-webkit-input-placeholder { color: $dark; }
+    @media (max-width: 627px) {
+      input[type="text"],
+      input[type="submit"] {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
   }
 }
 
@@ -169,10 +181,12 @@ body {
   display: block;
   margin: 1.5em auto 0 auto;
   text-align: center;
-  font-size: 0.8em;
+  font-size: 1em;
   color: white;
+  text-decoration: none;
   a {
     color: white;
+    font-weight: 400;
   }
 }
 
@@ -182,16 +196,19 @@ body {
 label {
   color: $dark;
 }
+input,
+textarea {
+  margin: 10px 0;
+}
 input[type="text"], textarea {
   width: 100%;
-  margin: .5em 2% 1em 0;
   display: inline-block;
   outline: none;
   background: rgba(250,250,250,.4);
   border: none;
   height: 40px;
   border-radius: 4px;
-  padding: 1em 2em;
+  padding-left: 1em;
 }
 textarea {
   height: 200px;
