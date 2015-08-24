@@ -2,6 +2,11 @@
 
 My attempt at the all-famous Todo application. I'm just starting out with RoR so excuse the bad practices if you spot any!
 
+# Known Issues
+
+- The app is not 100% mobile-friendly
+- There might be some styling glithes here and there. This is because the primary focus for this app was the back-end.
+
 ## License
 
 ```text
