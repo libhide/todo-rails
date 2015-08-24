@@ -4,7 +4,6 @@ development:
   database: todo_development
   pool: 5
   username: Ratik
-  password:
 
 test:
   adapter: postgresql
@@ -12,4 +11,3 @@ test:
   database: todo_test
   pool: 5
   username: Ratik
-  password:
