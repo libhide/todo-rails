@@ -77,3 +77,6 @@ bower.json
 ### Sass ###
 .sass-cache/
 *.css.map
+
+# Environment File
+.env
