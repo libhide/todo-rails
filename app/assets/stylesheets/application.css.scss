@@ -195,6 +195,7 @@ body {
 
 .forms {
   padding: 0 5%;
+  a { font-size: 0.95em; }
 }
 label {
   color: $dark;
@@ -221,7 +222,7 @@ textarea {
   padding: 1em;
 }
 input[type="submit"],
-button.mine {
+.btn {
   background: white;
   outline: none;
   border: none;
@@ -258,7 +259,6 @@ a {
 ::-webkit-input-placeholder { color: $dark; }
 
 // Styling form errors
-
 #error_explanation {
   padding: 0.5em 1em;
   background-color: darken($white_opaque, 2%);
@@ -271,24 +271,12 @@ a {
 }
 
 // Landing Page Styles
-
-.btn-land {
+.btn-landing {
   margin: 0 auto;
-  margin-bottom: 5px;
-
-  a {
-    text-decoration: none;
-    color: $dark;
-
-    &:hover {
-      text-decoration: none;
-      color: white;
-    }
-  }
+  display: block;
 }
 
 // Global stuff
-
 .user-actions {
   position: absolute;
   top: 0;
@@ -296,7 +284,3 @@ a {
   margin: 10px 20px 0 0;
   font-size: 1em;
 }
-
-
-
-
